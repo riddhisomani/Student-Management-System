@@ -32,6 +32,7 @@ li{
 }
 .content{
     display: contents;
+    color: black;
 }
 .content .item{
     margin: 2rem;
