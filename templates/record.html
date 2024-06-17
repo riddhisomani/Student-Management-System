@@ -13,6 +13,7 @@
     <title>Record</title>
 </head>
 <body>
+    <div class="full-page">
     <div class="header">
         <img src="" alt="" class="logo">
         <div class="nav-content">
@@ -25,55 +26,57 @@
         </div>
         <button class="log">LOGIN</button>
     </div>
-    <div class="section">
-    <p class="d-inline-flex gap-1">
-        <button type="button" class="btn btn-primary" data-bs-toggle="button">Create</button>
-        <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">View</button>
-    </p>
-    <div class="container">
-        <div class="title">Details</div>
-        <form action="#">
-            <div class="stu-details">
-                <div class="input-box">
-                    <span class="details">Semester</span>
-                    <input type="text" placeholder="Enter Semester" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Section</span>
-                    <input type="text" placeholder="Enter Section" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Subject</span>
-                    <input type="text" placeholder="Enter Subject" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Examination</span>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">CIE 1</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">CIE 2</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">CIE 3</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">OBT</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">QUIZ</label>
-                      </div>
-                </div>
+    <div id="login-form" class="login-page">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button"onclick="login()"class="toggle-btn">Create</button>
+                <button type="button"onclick="login()"class="toggle-btn">View</button>
             </div>
-            <div class="submit">
-                <input class="btn btn-primary" type="submit" value="Submit">
-            </div>
-        </form>
+            <form action="" id="login" class="input-group-login">
+                <div class="stu-details">
+                    <div class="input-box">
+                        <span class="details">Semester</span>
+                        <input type="text" placeholder="Enter Semester" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Section</span>
+                        <input type="text" placeholder="Enter Section" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Subject</span>
+                        <input type="text" placeholder="Enter Subject" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Examination</span>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">CIE 1</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">CIE 2</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3">CIE 3</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3">OBT</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3">QUIZ</label>
+                          </div>
+                    </div>
+                </div>
+            </form>
+            <form action="" id="register" class="input-group-register">
+
+            </form>
+   
+    </div>
     </div>
     </div>
 
@@ -82,6 +85,30 @@
 
 
 <!-- script -->
+ <script>
+    var x =document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register(){
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login(){
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+ </script>
+ <script>
+    var modal= document.getElementById('login-form');
+    window.onclick = function(event)
+    {
+        if(even.target == modal){
+            madal.style.display = "none";
+        }
+    }
+ </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 
     </script>
