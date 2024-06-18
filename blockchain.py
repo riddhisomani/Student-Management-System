@@ -22,7 +22,7 @@ data = []
 # Default Landing page of the app
 @app.route('/',  methods = ['GET'])
 def index():
-    return render_template("index.html")
+    return render_template("class.html")
 
 # Get Form input and decide what is to be done with it
 @app.route('/', methods = ['POST'])
