@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     max-width: 100%;
-    color: black;
     font-family: 'Roboto', 'serif';
 }
 
@@ -25,7 +24,7 @@ li {
     justify-content: space-between;
     vertical-align: middle;
     width: 100%;
-    height: 2rem;
+    /* height: 2rem; */
 }
 
 .header .nav-content {
@@ -45,6 +44,10 @@ li {
     font-weight: 500;
 }
 
+.item a, .log a{
+    color: black;
+}
+
 .header .nav-content .content .item:hover {
     cursor: pointer;
 }
@@ -59,49 +62,89 @@ li {
     font-weight: 500;
 }
 
+.front-img {
+    width: 100%;
+    height: 90vh;
+    opacity: .56;
+    margin-top: 0rem;
+}
+
 .section {
     display: flex;
     vertical-align: middle;
-    background-image: url(../images/welcome-img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 3rem 0;
+    margin: 0;
     width: 100%;
     height: 90vh;
     flex-direction: column;
     position: absolute;
 }
 
-.section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Adjust the RGBA color and opacity */
-    z-index: 1;
-}
-
 .row {
     z-index: 1;
-    margin: 6rem auto;
-    background: rgba(255, 255, 255, 0.2);
+    /* margin: 6rem auto; */
+    background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    height: 30rem;
     width: 35rem;
     padding: 2rem;
     border-radius: 3rem;
+    position: absolute;
+    top: -94%;
+    left: 30%;
+}
+
+.row h1 {
+    font-size: 25px;
+    margin-left: 1.5rem;
+    font-weight: 700;
 }
 
 #form {
     line-height: 2;
     font-size: 19px;
+}
 
+#course {
+    position: relative;
+    width: 95%;
+    padding: 16px 10px 7px;
+    background: transparent;
+    outline: none;
+    border-bottom: solid rgb(160, 160, 160);
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+    margin-top: -2rem;
+}
+
+.label {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.2s;
+}
+
+.send {
+    width: 5.4rem;
+    margin-left: 1rem;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.view {
+    margin-top: 1rem;
+}
+
+.result {
+    margin-top: -2rem;
 }

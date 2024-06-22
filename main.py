@@ -98,6 +98,10 @@ def student():
 def login():
     return render_template("login.html")
 
+@app.route('/signup')
+def signup():
+    return render_template("signup.html")
+
 # Start the flask app when program is executed
 if __name__ == "__main__":
     app.run(debug=True,port=8080)

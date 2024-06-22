@@ -662,9 +662,9 @@
   color: #BBDEFB !important;
 }
 
-.blue.lighten-3 {
+/* .blue.lighten-3 {
   background-color: #90CAF9 !important;
-}
+} */
 
 .blue-text.text-lighten-3 {
   color: #90CAF9 !important;
@@ -2601,7 +2601,7 @@ ul:not(.browser-default) > li {
 }
 
 a {
-  color: #039be5;
+  /* color: #039be5; */
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -5236,7 +5236,7 @@ small {
 .btn-large i,
 .btn-small i,
 .btn-flat i {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   line-height: inherit;
 }
 
@@ -5745,7 +5745,6 @@ button.btn-floating {
   background-color: #fafafa;
   padding: 0;
   max-height: 70%;
-  width: 55%;
   margin: auto;
   overflow-y: auto;
   border-radius: 2px;
@@ -5792,7 +5791,6 @@ button.btn-floating {
   right: 0;
   height: 125%;
   width: 100%;
-  background: #000;
   display: none;
   will-change: opacity;
 }
