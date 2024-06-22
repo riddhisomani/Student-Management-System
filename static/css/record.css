@@ -4,7 +4,6 @@
     /* padding: 0; */
     margin: 0;
     max-width: 100%;
-    color: black;
     box-sizing: border-box;
     font-family: 'Roboto','sans-serif';
 }
@@ -20,7 +19,7 @@
     background-image: linear-gradient();
     background-position: center;
     background-size: cover;
-    position: absolute;
+    /* position: absolute; */
  }
 a{
     text-decoration: none;
@@ -67,18 +66,30 @@ li{
     font-size: 20px;
     font-weight: 500;
 }
-#login-form
-{
-    display: none;
+.front-img{
+    width: 100%;
+    height: 90vh;
+    opacity: .56;
+    margin-top: 3rem;
 }
 .form-box{
     width: 380px;
-    height: 480px;
-    position: relative;
+    height: 515px;
+    position: absolute;
     margin: 2% auto;
-    background: rgba(0, 0, 0, 3);
-    padding: 10px;
+    /* background: lightblue; */
+    padding: 7px;
     overflow: hidden;
+    z-index: 1;
+    top: 20%;
+    left: 35%;
+    line-height: 2.3rem;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .button-box{
     width: 220px;
@@ -88,7 +99,9 @@ li{
     border-radius: 30px;
 }
 .toggle-btn{
-    padding: 10px 30px;
+    padding: 13px 33px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -102,16 +115,17 @@ li{
     position: absolute;
     width: 110px;
     height: 100%;
-    background: #f3c693;
+    background: rgba(13, 110, 253, 0.25);    ;
     border-radius: 30px;
     transition: .5s;
 }
 .input-group-login
 {
-    top: 150px;
+    top: 120px;
     position: absolute;
     width: 280px;
     transition: .5s;
+    height: 65%;
 }
 .input-group-register
 {
@@ -131,33 +145,36 @@ li{
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    font-weight:bold;
 }
 .submit-btn
 {
-    width: 85%;
-    padding: 10px 30px;
+    width: 50%;
+    padding: 7px 29px;
     cursor: pointer;
     display: block;
     margin: auto;
-    background: #f3c693;
+    background: rgba(13, 110, 253, 0.25);
     border: 0;
     outline: none;
     border-radius: 30px;
+    margin-top: 15px;
 }
 .check-box{
     margin: 30px 10px 34px 0;
 }
 span{
-    color: #777;
-    font-size: 12px;
-    bottom: 68px;
-    position: absolute;
+    color:black;
+    font-size: 18px;
+
+    /* bottom: 68px; */
+    /* position: absolute; */
 }
 #login{
     left: 50px;
 }
 #login input{
-    color: white;
+    color: rgb(13, 13, 13);
     font-size: 15;
 }
 #register{
