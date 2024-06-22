@@ -20,12 +20,17 @@ blockchain = create_genesis_block()
 data = []
 
 # Default Landing page of the app
-@app.route('/',  methods = ['GET'])
-def index():
+@app.route('/')
+def home():
+    print("Hello")
+    return render_template("index.html")
+
+@app.route('/attendance',  methods = ['GET'])
+def attendance():
     return render_template("attendance1.html")
 
 # Get Form input and decide what is to be done with it
-@app.route('/', methods = ['POST'])
+@app.route('/attendance', methods = ['POST'])
 def parse_request():
     if(request.form.get("name")):
         while len(data) > 0:
@@ -79,6 +84,20 @@ def show_records():
 def check():
     return render_template("result.html", result = check_integrity(blockchain))
 
+@app.route('/record')
+def record():
+    # create
+    return render_template("record.html")
+    # view
+
+@app.route('/student')
+def student():
+    return render_template("student.html")
+
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
 # Start the flask app when program is executed
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True,port=8080)
