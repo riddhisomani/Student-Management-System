@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     max-width: 100%;
@@ -8,19 +8,19 @@
     font-family: 'Roboto', 'serif';
 }
 
-body{
+body {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
@@ -28,27 +28,28 @@ li{
     /* height: 2rem; */
 }
 
-.header .nav-content{
+.header .nav-content {
     display: flex;
     flex-direction: row;
 }
-.content{
+
+.content {
     display: contents;
     color: black;
 }
 
-.header .nav-content .content .item{
+.header .nav-content .content .item {
     margin: 2rem;
     /* margin-right: 1rem; */
     font-size: 22px;
     font-weight: 500;
 }
 
-.header .nav-content .content .item:hover{
+.header .nav-content .content .item:hover {
     cursor: pointer;
 }
 
-.header .log{
+.header .log {
     margin: 1.5rem;
     margin-right: 2rem;
     width: 6rem;
@@ -57,15 +58,17 @@ li{
     font-size: 20px;
     font-weight: 500;
 }
-.front-img{
+
+.front-img {
     width: 100%;
     height: 90vh;
     opacity: .56;
     margin-top: 0rem;
 }
-.form-box{
+
+.form-box {
     width: 380px;
-    height: 515px;
+    height: 433px;
     position: absolute;
     margin: 2% auto;
     /* background: lightblue; */
@@ -75,21 +78,23 @@ li{
     top: 20%;
     left: 35%;
     line-height: 2.3rem;
-    background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.button-box{
+
+.button-box {
     width: 220px;
     margin: 35px auto;
     position: relative;
     box-shadow: 0 0 20px 9px #ff61241f;
     border-radius: 30px;
 }
-.toggle-btn{
+
+.toggle-btn {
     padding: 13px 33px;
     font-size: 16px;
     font-weight: bold;
@@ -99,34 +104,35 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     outline: none;
     position: relative;
 }
-#btn
-{
+
+#btn {
     top: 0;
     left: 0;
     position: absolute;
     width: 110px;
     height: 100%;
-    background: rgba(13, 110, 253, 0.25);    ;
+    background: rgba(13, 110, 253, 0.25);
+    ;
     border-radius: 30px;
     transition: .5s;
 }
-.input-group-login
-{
+
+.input-group-login {
     top: 120px;
     position: absolute;
     width: 280px;
     transition: .5s;
     height: 65%;
 }
-.input-group-register
-{
+
+.input-group-register {
     top: 150px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
-.input-field
-{
+
+.input-field {
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
@@ -136,10 +142,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
-    font-weight:bold;
+    font-weight: bold;
 }
-.submit-btn
-{
+
+.submit-btn {
     width: 50%;
     padding: 7px 29px;
     cursor: pointer;
@@ -151,30 +157,37 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 30px;
     margin-top: 15px;
 }
-.check-box{
+
+.check-box {
     margin: 30px 10px 34px 0;
 }
-span{
-    color:black;
+
+span {
+    color: black;
     font-size: 18px;
 
     /* bottom: 68px; */
     /* position: absolute; */
 }
-#login{
+
+#login {
     left: 50px;
 }
-#login input{
+
+#login input {
     color: rgb(13, 13, 13);
     font-size: 15;
 }
-#register{
+
+#register {
     left: 450px;
 }
-#register input{
+
+#register input {
     color: white;
     font-size: 15;
 }
+
 /* .section{
     background: linear-gradient(135deg,#71b7e6,#9b59b6); 
     margin-top: 3rem;
@@ -183,7 +196,7 @@ span{
 .container{
     width: 100%;
     /* background: #fff; */
-    /* padding: 25px 30px;
+/* padding: 25px 30px;
     border-radius: 5px;
 }
 .container.{
@@ -193,4 +206,4 @@ span{
     display: flex;
     flex-direction: column;
 
-} */ 
+} */

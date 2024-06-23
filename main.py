@@ -22,7 +22,6 @@ data = []
 # Default Landing page of the app
 @app.route('/')
 def home():
-    print("Hello")
     return render_template("index.html")
 
 @app.route('/attendance',  methods = ['GET'])
