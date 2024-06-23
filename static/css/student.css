@@ -104,7 +104,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .submit-btn
 {
-    width: 50%;
+    width: 45%;
     padding: 7px 29px;
     cursor: pointer;
     display: block;
@@ -114,6 +114,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     outline: none;
     border-radius: 30px;
     margin-top: 15px;
+    height: 3rem;
+    font-weight: 700;
+    font-size: 18px;
 }
 .check-box{
     margin: 30px 10px 34px 0;

@@ -28,15 +28,19 @@
     <div class="section">
         <div class="row">
             <h1>Enter the details of the class</h1>
-            <form class="col s12" id="form" name="form" action="/attendance" method="post">
+            <form class="col s12" id="form" name="form" action="/class" method="post">
                 <div class="row-one">
                     <div class="input-field col s12">
                         <label for="number">Total Number of Students</label>
                         <input type="number" id="number" name="number" >
                     </div>
                     <div class="input-field col s12">
-                        <label for="number" class="label">Course Code</label>
-                        <input type="string" id="course" name="number" >
+                        <select id="course" name="course">
+                            <option value="CSE">CSE</option>
+                            <option value="ISE">ISE</option>
+                            <option value="CSD">CSD</option>
+                        </select>
+                        <label for="course">Course Code</label>
                     </div>
                     <div class="input-field col s12">
                         <label for="year">Enrollment Year</label>
@@ -49,14 +53,6 @@
                     <button class="btn send waves-effect waves-light" type="submit" name="action">
                         <i class="material-icons right">Send</i>
                     </button>
-                </div>
-                <div class="row-two">
-                    <div class="col s12">
-                        <a class="btn view" href="/view.html">View previous records</a>
-                        <br />
-                        <br />
-                        <a class="btn result" href="/result.html">Check integrity of blockchain</a>
-                    </div>
                 </div>
             </form>
         </div>
