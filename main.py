@@ -38,10 +38,14 @@ def home():
 # ************ attendance part started **************************
 @app.route('/attendance',  methods = ['GET'])
 def attendance():
+    return render_template("attendance1.html")
+
+@app.route('/class',  methods = ['GET'])
+def class_page():
     return render_template("class.html")
 
 # Get Form input and decide what is to be done with it
-@app.route('/attendance', methods = ['POST'])
+@app.route('/class', methods = ['POST'])
 def parse_request():
     # if(request.form.get("name")):
     #     while len(data) > 0:
@@ -53,7 +57,7 @@ def parse_request():
     #                             date = dt.date.today())
 
     if(request.form.get("number")):
-        while len(data) > 2:
+        while len(data) > 0:
             data.pop()
         data.append(request.form.get("course"))
         data.append(request.form.get("year"))
@@ -63,7 +67,7 @@ def parse_request():
                                 year = request.form.get("year"),
                                 number = int(request.form.get("number")))
     elif(request.form.get("roll_no1")):
-        while len(data) > 4:
+        while len(data) > 2:
             data.pop()
         return render_template("result.html", result = add_block(request.form, data, blockchain))
 
