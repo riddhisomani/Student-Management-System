@@ -139,6 +139,10 @@ def exam_marks():
 def student():
     return render_template("student.html")
 
+@app.route('/detail')
+def detail():
+    return render_template("details.html")
+
 @app.route('/login')
 def login():
     return render_template("login.html")
