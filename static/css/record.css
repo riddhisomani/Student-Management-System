@@ -193,7 +193,7 @@ span {
 }
 
 #results{
-    width: 15rem;
+    /* width: 15rem; */
     position: absolute;
     margin: 4%;
     /* background: lightblue; */
@@ -201,7 +201,7 @@ span {
     overflow: hidden;
     z-index: 1;
     top: 20%;
-    left: 35%;
+    left: 30%;
     line-height: 2.3rem;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
