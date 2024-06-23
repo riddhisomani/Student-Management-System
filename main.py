@@ -99,7 +99,7 @@ def check():
     ## ************************attendance part ended
 
 
-@app.route("/record", methods=['POST', 'GET'])
+@app.route("/record", methods=['POST','GET'])
 def record():
     if request.method == "POST":
         classcode = request.form.get('classcode')
@@ -117,25 +117,23 @@ def record():
         db[collection_name].insert_many(records)
 
         return render_template("record.html")
-
     if request.method == "GET":
-        alldata = db['users'].find()
-        dataJson = []
-        for data in alldata:
-            id = data['_id']
-            firstName = data['firstName']
-            lastName = data['lastName']
-            email = data['email']
+        return render_template("record.html")
 
-            dataDict = {
-                "id": str(id),
-                "firstName": firstName,
-                "lastName": lastName,
-                "email": email
-            }
-            dataJson.append(dataDict)
 
-        return render_template("record.html", record=jsonify(dataJson))
+@app.route('/exam_marks', methods=['GET'])
+def exam_marks():
+    classcode = request.args.get('classcodeview')
+    examcode = request.args.get('examcodeview')
+    collection_name = classcode + examcode
+
+    records = db[collection_name].find()
+    dataJson = []
+    for record in records:
+        dataJson.append(record)
+
+    return render_template("exam_marks.html", records=dataJson, classcode=classcode, examcode=examcode)
+
 
 @app.route('/student')
 def student():
