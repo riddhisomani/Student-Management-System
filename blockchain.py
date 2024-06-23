@@ -22,21 +22,21 @@ data = []
 # Default Landing page of the app
 @app.route('/',  methods = ['GET'])
 def index():
-    return render_template("attendance1.html")
+    return render_template("class.html")
 
 # Get Form input and decide what is to be done with it
 @app.route('/', methods = ['POST'])
 def parse_request():
-    if(request.form.get("name")):
-        while len(data) > 0:
-            data.pop()
-        data.append(request.form.get("name"))
-        data.append(str(dt.date.today()))
-        return render_template("class.html",
-                                name = request.form.get("name"),
-                                date = dt.date.today())
+    # if(request.form.get("name")):
+    #     while len(data) > 0:
+    #         data.pop()
+    #     data.append(request.form.get("name"))
+    #     data.append(str(dt.date.today()))
+    #     return render_template("class.html",
+    #                             name = request.form.get("name"),
+    #                             date = dt.date.today())
 
-    elif(request.form.get("number")):
+    if(request.form.get("number")):
         while len(data) > 2:
             data.pop()
         data.append(request.form.get("course"))
