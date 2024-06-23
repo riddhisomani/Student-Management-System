@@ -1,7 +1,10 @@
 # Python module imports
 import datetime as dt
 import hashlib
-from flask import Flask, request, render_template, Response
+from flask import Flask, request, render_template, Response,jsonify
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+from flask_cors import CORS
 
 # Importing local functions
 from block import *
@@ -15,6 +18,13 @@ app = Flask(__name__)
 response = Response()
 response.headers.add('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0')
 
+client = MongoClient(
+    "mongodb+srv://samarsrivastav69:KpiFyK1gcuSIm0Pe@studentrecord.gggfdhi.mongodb.net",
+    tls=True,
+    tlsAllowInvalidCertificates=True
+)
+db = client["examination"]
+
 # Initializing blockchain with the genesis block
 blockchain = create_genesis_block()
 data = []
@@ -24,6 +34,8 @@ data = []
 def home():
     return render_template("index.html")
 
+
+# ************ attendance part started **************************
 @app.route('/attendance',  methods = ['GET'])
 def attendance():
     return render_template("attendance1.html")
@@ -83,11 +95,47 @@ def show_records():
 def check():
     return render_template("result.html", result = check_integrity(blockchain))
 
-@app.route('/record')
+
+    ## ************************attendance part ended
+
+
+@app.route("/record", methods=['POST', 'GET'])
 def record():
-    # create
-    return render_template("record.html")
-    # view
+    if request.method == "POST":
+        classcode = request.form.get('classcode')
+        examcode = request.form.get('examcode')
+        collection_name = classcode + examcode
+
+        records = [
+            {classcode + "1": request.form.get('st1')},
+            {classcode + "2": request.form.get('st2')},
+            {classcode + "3": request.form.get('st3')},
+            {classcode + "4": request.form.get('st4')},
+            {classcode + "5": request.form.get('st5')}
+        ]
+
+        db[collection_name].insert_many(records)
+
+        return render_template("record.html")
+
+    if request.method == "GET":
+        alldata = db['users'].find()
+        dataJson = []
+        for data in alldata:
+            id = data['_id']
+            firstName = data['firstName']
+            lastName = data['lastName']
+            email = data['email']
+
+            dataDict = {
+                "id": str(id),
+                "firstName": firstName,
+                "lastName": lastName,
+                "email": email
+            }
+            dataJson.append(dataDict)
+
+        return render_template("record.html", record=jsonify(dataJson))
 
 @app.route('/student')
 def student():
